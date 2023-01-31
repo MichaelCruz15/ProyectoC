@@ -1,0 +1,49 @@
+
+
+
+<h1 mat-dialog-title> Clientes</h1>
+<div mat-dialog-content>
+
+    <form [formGroup]='cursoForm' class="example-form" (ngSubmit)="agregarCurso()">
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Código</mat-label>
+            <input formControlName="codigo" type="string" matInput placeholder="" #codigo>
+        </mat-form-field><br>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Descripcion</mat-label>
+            <input matInput formControlName="descripcion" type="text" placeholder="" #descripcion>
+        </mat-form-field><br>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>docente</mat-label>
+            <input formControlName="docente" type="text" matInput placeholder="" #docente>
+        </mat-form-field><br>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>jornada</mat-label>
+            <input formControlName="jornada" type="text" matInput placeholder="" #jornada>
+        </mat-form-field><br>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>aula</mat-label>
+            <input formControlName="aula"  matInput placeholder="" #aula>
+        </mat-form-field><br>
+
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Alumnos</mat-label>
+            <input formControlName="alumnos" type="number" matInput placeholder="" #Alumnos>
+        </mat-form-field><br>
+
+
+        <div class="divBtnModificar">
+            <button type="submit" [disabled]="cursoForm.invalid" mat-raised-button color="primary"
+                (click)="closeDialog()">{{actionBtn}}</button>
+            <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+
+        </div>
+
+    </form>
+</div>
